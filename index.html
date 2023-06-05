@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marsha Sr - Hanif</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="styles.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style type="text/css">
+      #quality-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+      }
+      .container-fluid {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+      }
+      .dark-mode {
+        background-color: black;
+        color: white;
+      }
+      #video-container {
+        position: relative;
+      }
+      @media (max-width: 767px) {
+        /* Adjust the breakpoint as needed */
+        #watermark {
+          width: 40px; /* Adjust the width for smaller screens */
+        }
+      }
+    </style>
+  </head>
+  <body class="text-center">
+    <div class="card-body">
+      <div class="container-fluid h-100 d-flex flex-column justify-content-center align-items-center">
+        <div id="video-container" class="mb-4">
+          <video
+            id="video"
+            class="w-100"
+            controls=""
+            poster="https://static.showroom-live.com/image/room/cover/a9aa6279cf53c4b3f2d79e35a098e94934506edc56b60896dcc44a45f940611e_m.jpeg?v=1675092985"
+            style="height: 80vh; max-height: calc(56.25vw)"
+            src="https://hls-origin203.showroom-cdn.com/liveedge/04b2810c3a29eed86aab73d1078c8bdcc8cfe3b6c24c1acdef43ee3d7acfcbca_source/chunklist.m3u8"
+          ></video>
+          <button id="darkModeToggle" onclick="toggleDarkMode()">Dark-Light</button>
+        </div>
+        <div id="quality-wrapper" class="mb-4" style="width: 100%">
+          <ul id="quality-list" class="list-unstyled mb-0"></ul>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="mousetrap.min.js" charset="utf-8"></script>
+    <script src="player.js"></script>
+    <script src="dark-mode.js"></script>
+  </body>
+</html>
